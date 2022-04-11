@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #0E92E3;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  display: -ms-flexbox;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.btnLink {
+  background-color: #000000;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.btnLink:hover {
+  background-color: #272727;
+  transform: scale(1.05);
+}
+
+.imagemRaioX {
+  width: 250px;
+  height: 250px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#alertSpan {
+  color: #433A3F;
+  font-style: italic;
+  font-size: 1.03em;
+}
+
+/* Esconde o input */
+input[type='file'] {
+  display: none
+}
+
+label {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 10px;
+  display: block;
+  transition: .3s;
+}
+
+label:hover {
+  background-color: #dddddd;
+  transform: scale(1.05);
+}
+
+#isLoaded {
+  text-align: center;
+}
+
+.buttonSubmit {
+  background-color: #000000;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.buttonSubmit:hover {
+  background-color: #272727;
+  transform: scale(1.05);
+}
+
+/* Resultado */
+#imageSelected {
+  margin: 10px
+}

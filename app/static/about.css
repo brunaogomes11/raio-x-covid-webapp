@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0E92E3;
+}
+
+#sobre {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.8em;
+    color: white;
+}
+  
+#sobre h2 {
+    font-family: Caveat;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+#sobre p {
+    font-size: 1.5em;
+    padding: 0.5em;
+    font-family: Raleway;
+}
