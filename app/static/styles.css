@@ -39,6 +39,8 @@ body {
 .btnLink:hover {
   background-color: #272727;
   transform: scale(1.05);
+  text-decoration: none;
+  color: white;
 }
 
 .imagemRaioX {

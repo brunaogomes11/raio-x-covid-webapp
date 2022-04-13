@@ -1,4 +1,4 @@
-import app.covid
+from app.covid import classificar_imagem
 import os
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
@@ -24,7 +24,7 @@ def upload_file():
             return
         filename = secure_filename(imagem.filename)
         imagem.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        resultado = app.covid.classificar_imagem(imagem)
+        resultado = classificar_imagem(imagem)
         if resultado == 0:
             resultado = 'Resultado: Covid'
         elif resultado == 1:
@@ -36,7 +36,7 @@ def upload_file():
 
 @app.route('/display/<filename>')
 def display_image(filename):
-	return redirect(url_for('static', filename='uploads/' + filename), code=301)
+	return redirect(url_for('static', filename='/uploads/' + filename), code=301)
 
 @app.route('/about')
 def about_page():
