@@ -38,9 +38,9 @@ def upload_file():
 def display_image(filename):
 	return redirect(url_for('static', filename='/uploads/' + filename), code=301)
 
-@app.route("/uploadedRN", methods=['GET', 'POST'])
+@app.route("/uploadedRN", methods=['POST'])
 def image():
-    thread = Thread(target=app.controls.delete_files)
+    thread = Thread(target=delete_files)
     thread.daemon = True
     thread.start()
     if request.method == 'POST':
