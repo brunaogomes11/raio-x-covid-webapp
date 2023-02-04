@@ -56,7 +56,7 @@ def image():
             resultado = 'Resultado: PNEUMONIA não detectada e COVID não detectado'
         elif resultado == 2:
             resultado = 'Resultado: Pneumonia'
-        return {"message": result}
+        return {"message": resultado}
 
 @app.route('/about')
 def about_page():
