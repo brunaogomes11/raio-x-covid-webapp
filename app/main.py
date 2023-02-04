@@ -49,7 +49,7 @@ def image():
         imagem = request.files.get('file')
         if not imagem:
             return
-        resultado = app.covid.classificar_imagem(imagem)
+        resultado = classificar_imagem(imagem)
         if resultado == 0:
             resultado = 'Resultado: Covid'
         elif resultado == 1:
