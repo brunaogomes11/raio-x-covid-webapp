@@ -56,7 +56,7 @@ def image():
             resultado = 'Resultado: PNEUMONIA não detectada e COVID não detectado'
         elif resultado == 2:
             resultado = 'Resultado: Pneumonia'
-        return resultado
+        return jsonify({"Resultado":f'{resultado}'})
 
 @app.route('/about')
 def about_page():
