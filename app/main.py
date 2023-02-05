@@ -43,7 +43,7 @@ def image():
     if request.method == 'POST':
         if 'file' not in request.files:
             return redirect(request.url)
-        imagem = request.files.get('file')
+        imagem = request.files.get('photo')
         if not imagem:
             return
         resultado = classificar_imagem(imagem)
