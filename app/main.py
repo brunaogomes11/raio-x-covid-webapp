@@ -41,7 +41,7 @@ def display_image(filename):
 @app.route("/uploadedRN", methods=['GET','POST'])
 def imageUpload():
     if request.method == 'POST':
-        if 'file' not in request.files:
+        if 'image' not in request.files:
             return redirect(request.url)
         imagem = request.files['image']
         if not imagem:
