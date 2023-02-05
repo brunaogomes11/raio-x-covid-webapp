@@ -40,20 +40,15 @@ def display_image(filename):
 
 @app.route("/uploadedRN", methods=['GET','POST'])
 def imageUpload():
-    if request.method == 'POST':
-        if 'image' not in request.files:
-            return redirect(request.url)
-        imagem = request.files['image']
-        if not imagem:
-            return
-        resultado = classificar_imagem(imagem)
-        if resultado == 0:
-            resultado = 'Resultado: Covid'
-        elif resultado == 1:
-            resultado = 'Resultado: PNEUMONIA não detectada e COVID não detectado'
-        elif resultado == 2:
-            resultado = 'Resultado: Pneumonia'
-        return {"message": resultado}
+    imagem = request.files['image']
+    resultado = classificar_imagem(imagem)
+    if resultado == 0:
+        resultado = 'Resultado: Covid'
+    elif resultado == 1:
+        resultado = 'Resultado: PNEUMONIA não detectada e COVID não detectado'
+    elif resultado == 2:
+        resultado = 'Resultado: Pneumonia'
+    return {"message": resultado}
 
 @app.route('/about')
 def about_page():
