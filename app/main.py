@@ -39,11 +39,11 @@ def display_image(filename):
 	return redirect(url_for('static', filename='/uploads/' + filename), code=301)
 
 @app.route("/uploadedRN", methods=['GET','POST'])
-def image():
+def imageUpload():
     if request.method == 'POST':
         if 'file' not in request.files:
             return redirect(request.url)
- 	imagem = request.files['image']
+        imagem = request.files['image']
         if not imagem:
             return
         resultado = classificar_imagem(imagem)
