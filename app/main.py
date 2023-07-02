@@ -1,3 +1,4 @@
+# Start Server
 from app.covid import classificar_imagem
 import os
 from flask import Flask, render_template, request, redirect, url_for
