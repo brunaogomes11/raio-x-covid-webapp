@@ -16,3 +16,4 @@ torch==1.6.0+cpu
 torchvision==0.7.0+cpu
 urllib3==1.25.10
 Werkzeug==1.0.1
+psycopg2-binary==2.9.3
